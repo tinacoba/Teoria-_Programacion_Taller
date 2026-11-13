@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>2. Ejecución de Consultas SQL</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f9f4; color: #333; margin: 0; padding: 0; line-height: 1.6; }
+        header { background-color: #a8dadc; color: #1d3557; padding: 2rem; text-align: center; }
+        nav { background-color: #457b9d; display: flex; justify-content: center; gap: 1.5rem; padding: 1rem; }
+        nav a { color: white; text-decoration: none; font-weight: bold; padding: 0.5rem 1rem; border-radius: 4px; transition: background 0.3s; }
+        nav a:hover { background-color: #1d3557; }
+        .container { max-width: 900px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        h1, h2 { color: #1d3557; }
+        img { max-width: 100%; border-radius: 6px; border: 1px solid #ddd; margin: 1rem 0; }
+        code { background: #f1f1f1; padding: 2px 6px; border-radius: 4px; color: #d63384; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>2. Ejecución de las Consultas SQL</h1>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="conexion.html">1. Conexión</a>
+        <a href="consultas.html">2. Consultas SQL</a>
+        <a href="listado.html">3. Listado</a>
+        <a href="interaccion.html">4. Interacción / Control</a>
+    </nav>
+    <div class="container">
+        <h2>Interactuando con la Base de Datos</h2>
+        <p>Las consultas se ejecutan principalmente dentro de los métodos de las clases, como se observa en <code>autor.php</code>.</p>
+        <p>Los métodos (como <em>Agregar</em>, <em>Mostrar</em>, <em>Modificar</em> y <em>Eliminar</em>) reciben como parámetro el objeto de la conexión.</p>
+        <p>Para ejecutar una acción, escribimos la instrucción SQL entre comillas y llamamos al método <code>query()</code>:</p>
+        <p>Ejemplo: <code>$consulta="SELECT * FROM autor";</code></p>
+        <p><code>$resultado = $conexion->query($consulta);</code></p>
+        <p><b>query</b> es un método que permite ejecutar una consulta SQL directamente en la Base de Datos</p>
+        <p>Las consultas SQL, estudiadas en 4° año, pueden ser SELECT, INSERT, UPDATE o DELETE.</p>
+        <p>En la variable <code>$resultado</code> se guarda el resultado de ejecutar el SQL.</p>
+        <ul>
+        <li style="list-style-image: url('images/etiqueta.png');">Si es un SELECT la variable <code>$resultado</code> guarda un objeto con las referencias a cada fila de la tabla.</li>
+        <li style="list-style-image: url('images/etiqueta.png');">Si es una instrucción INSERT, UPDATE o DELETE, la variable <code>$resultado</code> recibe <code>true</code> o <code>false</code></li>
+        <li style="list-style-image: url('images/etiqueta.png');">Si hay error al ejecutar el SQL, ese error se puede mostrar usando <code>$conexion->error</code>.</li>
+        </ul>    
+    </div>
+</body>
+</html>

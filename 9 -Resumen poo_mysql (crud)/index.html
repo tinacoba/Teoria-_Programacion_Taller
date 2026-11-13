@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD con POO en PHP y MySQL</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f9f4; color: #333; margin: 0; padding: 0; line-height: 1.6; }
+        header { background-color: #a8dadc; color: #1d3557; padding: 2rem; text-align: center; }
+        nav { background-color: #457b9d; display: flex; justify-content: center; gap: 1.5rem; padding: 1rem; }
+        nav a { color: white; text-decoration: none; font-weight: bold; padding: 0.5rem 1rem; border-radius: 4px; transition: background 0.3s; }
+        nav a:hover { background-color: #1d3557; }
+        .container { max-width: 900px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        h1, h2 { color: #1d3557; }
+        .btn { display: inline-block; background-color: #a8dadc; color: #1d3557; padding: 0.6rem 1.2rem; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 1rem; }
+        .btn:hover { background-color: #457b9d; color: white; }
+    
+		 .tabla-crud {width:100%; border-collapse:collapse; font-family:'Segoe UI', Tahoma, Geneva, Verdana,sans-serif; margin: 20px 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); border-radius: 8px;overflow: hidden;}
+		 .tabla-crud th {background-color: #e3faf2;color: #2b6cb0; font-weight: 600;text-transform: uppercase;font-size: 0.85rem;letter-spacing:0.5px;padding: 14px 16px;text-align: left;border-bottom: 2px solid #c6f6d5;}
+		 .tabla-crud td {padding: 14px 16px;color: #4a5568;background-color: #ffffff;border-bottom:1px solid #edf2f7;font-size: 0.95rem;}
+		 .tabla-crud tbody tr:hover td { background-color: #f7fafc;}  
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Resumen del ejemplo CRUD con POO (PHP y MySQL)</h1>
+        <p>Conexion desde PHP a la Base de Datos biblioteca en MySQL.</p>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="conexion.html">1. Conexión</a>
+        <a href="consultas.html">2. Consultas SQL</a>
+        <a href="listado.html">3. Listado</a>
+        <a href="interaccion.html">4. Interacción / Control</a>
+        <a href="resumen.html">5. En Resumen...</a>
+    </nav>
+    <div class="container">
+        <h2>Programación Orientada a Objetos</h2>
+        <p>Aspectos más importante para crear una aplicación web conectada a una base de datos MySQL usando POO en PHP.</p>
+        <p>Se recomienda ejecutar el código del programa de ejemplo para ver cada opción en acción.</p>
+        <h3>¿Qué es un CRUD en software?</h3>
+        <p>Un software CRUD permite relizar acciones sobre los datos de las tablas de las Base de Datos como agregar nuevas filas, modificar algún dato de la tabla y eliminar alguna fila de la tabla.</p>
+        <table class="tabla-crud">
+		  <thead>
+			<tr>
+			  <th>Create</th>
+			  <th>Read</th>
+			  <th>Update</th>
+			  <th>Delete</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr>
+			  <td style="background-color:#F0FFF0;">Crear/Agregar: INSERT INTO</td>
+			  <td style="background-color:#E0FFFF;">Leer /Mostrar: SELECT * FROM </td>
+			  <td style="background-color:#F7FEE7;">Actualizar /Modificar: UPDATE...SET</td>
+			  <td style="background-color:#DBEAFE;">Eliminar /Borrar: DELETE FROM</td>
+			</tr>
+		  </tbody>
+		</table>
+      
+        <img src="images/image5.png" alt="Ejemplo de Sistema" style="max-width: 100%; border-radius: 6px; border: 1px solid #ddd; margin: 1rem 0;">
+        <br>
+
+    </div>
+</body>
+</html>

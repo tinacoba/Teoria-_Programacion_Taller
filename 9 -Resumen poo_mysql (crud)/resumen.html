@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>2. Ejecución de Consultas SQL</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f9f4; color: #333; margin: 0; padding: 0; line-height: 1.6; }
+        header { background-color: #a8dadc; color: #1d3557; padding: 2rem; text-align: center; }
+        nav { background-color: #457b9d; display: flex; justify-content: center; gap: 1.5rem; padding: 1rem; }
+        nav a { color: white; text-decoration: none; font-weight: bold; padding: 0.5rem 1rem; border-radius: 4px; transition: background 0.3s; }
+        nav a:hover { background-color: #1d3557; }
+        .container { max-width: 900px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        h1, h2 { color: #1d3557; }
+        img { max-width: 100%; border-radius: 6px; border: 1px solid #ddd; margin: 1rem 0; }
+        code { background: #f1f1f1; padding: 2px 6px; border-radius: 4px; color: #d63384; }
+        code1 { background: #f1f1f1; padding: 2px 6px; border-radius: 4px; color: blue; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>2. Ejecución de las Consultas SQL</h1>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="conexion.html">1. Conexión</a>
+        <a href="consultas.html">2. Consultas SQL</a>
+        <a href="listado.html">3. Listado</a>
+        <a href="interaccion.html">4. Interacción / Control</a>
+        <a href="resumen.html">5. En Resumen...</a>
+    </nav>
+    <div class="container">
+        <h3>Para finalizar</h3>        
+        <ul>
+        <li style="list-style-image: url('images/etiqueta.png');">En un programa CRUD, los métodos Mostrar, Agregar, Modificar y Eliminar se repiten en todas las clases.</li>
+        <li style="list-style-image: url('images/etiqueta.png');">Los pasos generales del programa CRUD son:</li>
+          <ul>
+          <li>Establecer la conexión a la base de datos con <code>new mysqli(“localhost”,“root”, “”,“biblioteca”)</code>.</li>
+          <li>Crear el objeto de la clase</li>
+          <li>Llamar a algún método:</li>
+             <ul>
+              <li>dentro del código se escribe la consulta SQL (SELECT / INSERT / UPDATE / DELETE)</li>
+              <li>se ejecuta el SQL con <code>query($consulta)</code></li>
+              <li>se verifica si la consulta se pudo ejecutar <code>$resultado=$conexion->query($consulta)</code>, para eso se evalúa la variable $resultado</li>
+              <li><code>if($resultado)</code>, verifica si la variable resultado no es falsa, eso sucede cuando falla la ejecución de la consulta.</li>
+             </ul>
+           </ul>
+        </ul>
+        <ul>
+        <li style="list-style-image: url('images/indicar.png');"><code1>Debe ejecutar el programa y probar las diferentes opciones para tener mayor claridad del código.</code1></li>    
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+#contenedor {
+  width: 100%;  
+  display: inline-block; 
+ }
+
+#cuerpo {
+  width: 80%;
+  height:100%;
+  margin: 0 auto;
+  color: #0A0A0A;
+  text-align: center;
+  font-size:30px;
+background: #87D49C; 
+}
+
+#vista {
+  width: 80%;
+  min-height: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  
+  background-color: #ECF8EF;
+  color: #0A0A0A;
+  text-align: center;
+  font-size: 14px;
+  
+  border-radius: 10px;
+}
+
+body{
+background-color:#EFFFE8;
+font-family: 'Roboto', sans-serif;
+margin:0;
+padding:0;
+}
+h1{
+height: 45px;
+padding-top: 20px;
+}
+.boton{
+  display: inline-block;
+  background-color:#bdf5ff;
+  color: black; 
+  padding:10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius:10px;
+  font-weight:bold;
+  cursor:pointer;  
+	}
+	
+.boton:link,
+.boton:visited,
+.boton:focus {
+  background: #bdf5ff;
+}
+
+.boton:hover {
+  background: #bdf5ff;
+}
+
+.boton:active {
+  background: #bdf5ff;
+}
+
+nav {
+      background-color: #87D49C; /* color de fondo */
+      width: 100%; /* ocupa todo el ancho */
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: space-around; /* reparte las opciones en todo el ancho */
+      
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 15px 20px;
+      color: black;
+      text-decoration: none;
+      font-size:23px;
+     font-weight:bold; 
+    }
+
+    nav ul li a:hover {
+      background-color: #87D49C; /* color al pasar el mouse */
+    }
+
+    /* Submenú */
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #87D49C;
+      padding: 0;
+      list-style: none;
+      min-width: 300px;
+    }
+
+    nav ul li:hover ul {
+      display: block;
+    }
+
+    nav ul li ul li a {
+      padding: 10px;
+    }
+
+    nav ul li ul li a:hover {
+      color:black;
+      background-color: #ECF8EF;
+    }
+form{
+text-align: left;
+position: left;
+width: 460px;
+height: 300px;
+padding: 1em;
+box-sizing: border-box;
+/*background:#C2FFBF;*/
+}
+table{
+border-collapse: collapse;
+border: 2px solid;
+/*background:#E3E9FA;*/
+}
+#vista form {
+    background-color: #DBFFE5;
+}
+#vista table {
+    background-color: #DBFFE5;
+}
+
+
+table th,td{
+border: 1.5px solid;
+letter-spacing: 1.5px;
+}
+.fondo{
+
+width: 80%;
+  min-height: 400px;
+}	

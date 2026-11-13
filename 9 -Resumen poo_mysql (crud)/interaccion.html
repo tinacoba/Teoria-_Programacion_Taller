@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>4. Interacción entre Programas</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f9f4; color: #333; margin: 0; padding: 0; line-height: 1.6; }
+        header { background-color: #a8dadc; color: #1d3557; padding: 2rem; text-align: center; }
+        nav { background-color: #457b9d; display: flex; justify-content: center; gap: 1.5rem; padding: 1rem; }
+        nav a { color: white; text-decoration: none; font-weight: bold; padding: 0.5rem 1rem; border-radius: 4px; transition: background 0.3s; }
+        nav a:hover { background-color: #1d3557; }
+        .container { max-width: 900px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        h1, h2 { color: #1d3557; }
+        img { max-width: 100%; border-radius: 6px; border: 1px solid #ddd; margin: 1rem 0; }
+        code { background: #f1f1f1; padding: 2px 6px; border-radius: 4px; color: #d63384; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>4. Interacción entre los Programas (Controlador)</h1>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="conexion.html">1. Conexión</a>
+        <a href="consultas.html">2. Consultas SQL</a>
+        <a href="listado.html">3. Listado</a>
+        <a href="interaccion.html">4. Interacción / Control</a>
+        <a href="resumen.html">5. En Resumen...</a>
+    </nav>
+    <div class="container">
+        <h2>El archivo inicio.php como controlador</h2>
+        <p>El funcionamiento coordinado del sistema lo realiza el archivo <code>inicio.php</code>, que actúa como el <b>"controlador"</b> principal de la aplicación web.</p>
+        <img src="images/image5.jpg" alt="Menú principal biblioteca">
+        <h3>Pasos principales:</h3>
+        <ul>
+            <li><strong>Preparación del entorno: inicio.php</strong> captura esta variable <code>$opcion</code> y carga todos los archivos necesarios (conexion.php, Autor.php, etc.) usando <code>require_once</code> que incerta el código del archivo de manera similar a <code>include</code> a diferencia de include, esta instrucción carga una sola vez el archivo y si existe algún error se detiene la ejecución.</li>
+			<a href="images/inicio.pdf">Ver el código de inicio.php</a>
+            <li><strong>Recepción de la petición:</strong> El usuario hace clic en el menú y se envía una variable por la URL usando GET (ej. <code>?opcion=1</code>).</li>
+            <img src="images/image6.png" alt="Seleccion Agregar Autor">            
+            <li><strong>Enrutamiento:</strong> Mediante una estructura <code>switch</code>, se evalúa el valor de <code>$opcion</code> para llamar al método correspondiente (Agregar, Modificar, Eliminar o Mostrar).</li>
+        </ul>
+      <p>El usuario va a la opción Gestionar Autores,con el valor de opcion igual a <b>1</b> va al archivo <b>inicio.php</b>, el valor de opcion se toma por GET.</p>
+      <p>Luego se pasa la ejecución al <code>switch</code>, ingresa en <code>case 1:</code> y llama al método <b>Mostrar</b> de la clase <b>Autor</b> que muestra la tabla Autor.</p>
+      <p>Al final de la tabla se tiene tres opciones Agregar Autor, Modificar Autor, Eliminar Autor.</p>
+      <p>Si selecciona Agregar Autor, por <code>href</code> se envia al archivo <b>inicio.php</b> el valor de opcion igual a <b>11</b>, vuelve al <code>switch</code> y se llama al método Agregar de la clase Autor.</p>
+      <img src="images/inicio_mostrar.png" alt="InicioMostrar">
+      <h4>Método Agregar de la clase Autor</h4>          
+      <img src="images/inicio_agregar.png" alt="InicioAgregar">
+      <ul>
+	  <li><code>if(isset($_POST['si']))</code> la función isset verifica si el botón Agregar fue seleccionado</li>
+      <li><code>header(“Location: …...”)</code> instrucción que se usa para redirigir al usuario de una página web a otra diferente. El programa se redirige a inicio.php con la opcion 1, que muestra nuevamente la tabla y se puede ver el nuevo autor ingresado.</li>
+      </ul>
+      <h4>Método Modificar de la clase Autor</h4>          
+      <img src="images/inicio_modificar1.png" alt="InicioModificar">
+      <img src="images/inicio_modificar2.png" alt="InicioModificar">
+      <h4>Método Eliminar de la clase Autor</h4>          
+      <img src="images/inicio_eliminar.png" alt="InicioEliminar">
+      
+        <h2>Conclusión</h2>
+        <p>En todo programa CRUD, los métodos <em>Mostrar</em>, <em>Agregar</em>, <em>Modificar</em> y <em>Eliminar</em> siguen una estructura lógica basada en Programación Orientada a Objetos y consultas SQL seguras.</p>
+    </div>
+</body>
+</html>

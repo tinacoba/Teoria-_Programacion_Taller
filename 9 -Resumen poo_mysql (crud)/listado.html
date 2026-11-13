@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>3. Listado del Resultado</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f9f4; color: #333; margin: 0; padding: 0; line-height: 1.6; }
+        header { background-color: #a8dadc; color: #1d3557; padding: 2rem; text-align: center; }
+        nav { background-color: #457b9d; display: flex; justify-content: center; gap: 1.5rem; padding: 1rem; }
+        nav a { color: white; text-decoration: none; font-weight: bold; padding: 0.5rem 1rem; border-radius: 4px; transition: background 0.3s; }
+        nav a:hover { background-color: #1d3557; }
+        .container { max-width: 900px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        h1, h2 { color: #1d3557; }
+        img { max-width: 100%; border-radius: 6px; border: 1px solid #ddd; margin: 1rem 0; }
+        code { background: #f1f1f1; padding: 2px 6px; border-radius: 4px; color: #d63384; }
+        resaltar{background:aqua;font-weight: bold;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>3. Listado del Resultado de la Consulta SQL</h1>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="conexion.html">1. Conexión</a>
+        <a href="consultas.html">2. Consultas SQL</a>
+        <a href="listado.html">3. Listado</a>
+        <a href="interaccion.html">4. Interacción / Control</a>
+        <a href="resumen.html">5. En Resumen...</a>
+    </nav>
+    <div class="container">
+        <h2>Mostrando los datos en una tabla HTML</h2>
+        <p>Para mostrar un listado, primero ejecutamos una consulta <code>SELECT</code>. Luego, mediante un bucle <code>while</code> y la función</p>
+        <p><code>$resultado->fetch_assoc()</code>, recorremos los registros fila por fila.</p>
+        <p>El método <code>$resultado->fetch_assoc()</code> sirve para extraer una fila de los resultados que devolvió la base de datos y transformarla en un array asociativo de PHP.</p>
+		<p>Cada registro se convierte en un arreglo asociativo donde los índices son los nombres de las columnas (ej. <code>"cod_autor"</code>, <code>"nombre"</code>, <code>"apellido"</code>).</p>
+        <img src="images/image32.png" alt="Listado de Autores en pantalla">
+        <p>El botón <resaltar>Agregar Autor</resaltar> corresponde al valor de opción 11,<resaltar>Modificar Autor</resaltar> es el valor 12 y <resaltar>Eliminar Autor</resaltar> es 13</p>
+        <ul>
+        <li style="list-style-image: url('images/etiqueta.png');"><code>href</code> envia la elección del usuario al archivo <code>inicio.php</code> con un nuevo valor de opcion para que se evalúe en el <code>switch</code> y se llame al método que corresponda (Agregar nuevo autor, Modificar autor o Eliminar autor).</li> 
+        </ul>
+        <p>Al enviar valores por <b>href</b>, se envían por <code>GET</code>.</p>
+        <p><b>Observar</b> que las opciones debajo de la tabla tienen el aspecto de <resaltar>botones</resaltar> que se da con <b>CSS</b> pero son <code>href</code></p>
+        
+    </div>
+</body>
+</html>
